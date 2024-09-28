@@ -1,10 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { ShoppingListItem } from "./components/ShoppingListItem";
+import { theme } from "./theme";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app! Hello World!</Text>
+      <ShoppingListItem name="coffee" />
+      <ShoppingListItem name="tea" />
+      <ShoppingListItem name="sugar" isCompleted />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
+    backgroundColor: theme.colorGreen,
     justifyContent: "center",
   },
 });
